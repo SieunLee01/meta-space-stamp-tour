@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>META SPACE — Enter the Next Space</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <div class="brand">META SPACE</div>
+    <div class="status" id="statusText">MISSION 0 / 4</div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">META SPACE DEPARTMENT · 2026</p>
+        <h1>ENTER<br><span>THE NEXT</span><br>SPACE</h1>
+        <p class="intro">전시장 곳곳의 QR을 스캔하고<br>각 부스의 SPACE ALIEN을 수집하세요.</p>
+        <a class="main-button" href="#mission">START MISSION ↗</a>
+      </div>
+      <div class="hero-alien">
+        <div class="alien-orbit"></div>
+        <div class="alien">
+          <div class="alien-eye left"></div>
+          <div class="alien-eye right"></div>
+          <div class="alien-mouth"></div>
+        </div>
+        <div class="scan">LIFEFORM DETECTED // META-01</div>
+      </div>
+    </section>
+
+    <section class="mission" id="mission">
+      <div class="section-title">
+        <p class="eyebrow">ALIEN COLLECTION</p>
+        <h2>DISCOVER<br>THE SPACES.</h2>
+        <p>부스의 QR을 스캔하면 해당 캐릭터가 해금됩니다.</p>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-label"><span>MISSION PROGRESS</span><strong id="progressText">0 / 4</strong></div>
+        <div class="progress"><div id="progressBar"></div></div>
+      </div>
+      <div class="collection" id="collection"></div>
+    </section>
+
+    <section class="complete hidden" id="complete">
+      <div class="complete-mark">★</div>
+      <p class="eyebrow">MISSION COMPLETE</p>
+      <h2>YOU ENTERED<br>THE NEXT SPACE.</h2>
+      <p>모든 SPACE ALIEN을 수집했습니다.</p>
+      <button class="outline-button" id="resetButton">RESET MISSION</button>
+    </section>
+  </main>
+
+  <div class="modal hidden" id="discoverModal">
+    <div class="modal-card">
+      <button class="close" id="closeModal">×</button>
+      <p class="eyebrow">NEW SPACE DETECTED</p>
+      <div class="modal-alien" id="modalAlien"></div>
+      <p class="space-no" id="modalSpaceNo"></p>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <button class="main-button" id="modalContinue">COLLECT ★</button>
+    </div>
+  </div>
+
+  <footer>
+    <span>ENTER THE NEXT SPACE</span>
+    <span>GAME · 3D · XR · DIGITAL TWIN</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

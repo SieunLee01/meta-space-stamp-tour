@@ -1,0 +1,5 @@
+배포 후 예시:
+https://YOUR-DOMAIN.com/?booth=01
+https://YOUR-DOMAIN.com/?booth=02
+https://YOUR-DOMAIN.com/?booth=03
+https://YOUR-DOMAIN.com/?booth=04
