@@ -113,3 +113,91 @@ footer{display:flex;justify-content:space-between;padding:25px 8vw;border-top:1p
 /* TEAM MEMBER STACK - FINAL */
 .member-stack{display:flex!important;flex-direction:column!important;grid-template-columns:none!important;width:100%!important;gap:10px!important}
 .member-stack>div{display:block!important;width:100%!important;max-width:none!important;box-sizing:border-box!important}
+
+
+/* TEAM MEMBER PROFILE POPUP */
+body.modal-open{overflow:hidden}
+.member-stack>div{
+  cursor:pointer!important;
+  transition:transform .2s ease,border-color .2s ease,background .2s ease;
+}
+.member-stack>div:hover{
+  transform:translateX(4px);
+  border-color:var(--cyan)!important;
+  background:rgba(86,245,255,.04);
+}
+.member-stack>div:focus-visible{
+  outline:2px solid var(--lime);
+  outline-offset:3px;
+}
+.member-modal{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:rgba(0,0,0,.78);
+  backdrop-filter:blur(5px);
+}
+.member-modal.hidden{display:none!important}
+.member-modal-card{
+  position:relative;
+  width:min(440px,100%);
+  padding:42px 36px 38px;
+  background:#0b0b12;
+  border:1px solid var(--cyan);
+  box-shadow:12px 12px 0 var(--pink);
+  text-align:center;
+}
+.member-modal-close{
+  position:absolute;
+  top:8px;
+  right:12px;
+  width:40px;
+  height:40px;
+  border:0;
+  background:transparent;
+  color:var(--paper);
+  font-size:30px;
+  line-height:1;
+  cursor:pointer;
+}
+.member-modal-close:hover{color:var(--cyan)}
+.member-modal-avatar{
+  width:90px;
+  height:90px;
+  margin:8px auto 22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid var(--cyan);
+  border-radius:50%;
+  color:var(--cyan);
+  font-family:Anton,Impact,sans-serif;
+  font-size:28px;
+  box-shadow:0 0 24px rgba(86,245,255,.18);
+}
+.member-modal-role{
+  margin:0 0 8px!important;
+  color:var(--lime)!important;
+  font-size:10px!important;
+  letter-spacing:.16em;
+}
+.member-modal-card h3{
+  margin:0 0 16px;
+  font-family:Anton,Impact,sans-serif;
+  font-size:42px;
+  font-weight:400;
+  line-height:1;
+}
+.member-modal-card #memberModalInfo{
+  margin:0!important;
+  color:#aaa8b2;
+  line-height:1.8;
+}
+@media(max-width:480px){
+  .member-modal-card{padding:38px 24px 30px}
+  .member-modal-card h3{font-size:34px}
+}
