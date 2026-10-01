@@ -244,4 +244,4 @@ body.modal-open{overflow:hidden}
 
 
 
-.hero-character{position:relative;z-index:2;width:min(470px,82%);height:auto;display:block;filter:drop-shadow(16px 18px 0 rgba(66,108,255,.78));animation:heroFloat 5s ease-in-out infinite}.hero-alien:before{content:"";position:absolute;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle,rgba(86,245,255,.16),rgba(155,108,255,.07) 48%,transparent 72%);filter:blur(10px);z-index:0}@keyframes heroFloat{0%,100%{transform:translateY(0) rotate(1deg)}50%{transform:translateY(-9px) rotate(-1deg)}}.hero-alien .scan{z-index:3}@media(max-width:760px){.hero-character{width:min(350px,84vw)}}
+.hero-character{position:relative;z-index:2;width:min(620px,100%);height:auto;display:block;filter:none;animation:heroFloat 5s ease-in-out infinite}.hero-alien:before{display:none}@keyframes heroFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-7px) rotate(0deg)}}@media(max-width:760px){.hero-character{width:min(92vw,620px)}}
