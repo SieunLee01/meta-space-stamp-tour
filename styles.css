@@ -85,3 +85,8 @@ footer{display:flex;justify-content:space-between;padding:25px 8vw;border-top:1p
 .game-detail-panel .placeholder-text{min-height:0}
 .game-detail-panel .video-placeholder{grid-row:1 / span 4}
 @media(max-width:800px){.game-detail-panel .video-placeholder{grid-row:auto}}
+
+
+/* Detail panel sits above the game thumbnail/title grid when opened */
+.game-detail-panel{margin-top:35px;margin-bottom:45px}
+.game-detail-panel.active{order:-1}
