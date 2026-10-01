@@ -107,3 +107,41 @@ document.querySelectorAll(".game-caption h3").forEach(title => {
   title.addEventListener("click", () => toggleGame(title.closest(".game-card")));
 });
 
+
+
+/* TEAM MEMBER PROFILE POPUP */
+const memberModal = document.getElementById("memberModal");
+const memberModalClose = document.getElementById("memberModalClose");
+const memberModalName = document.getElementById("memberModalName");
+const memberModalInfo = document.getElementById("memberModalInfo");
+const memberModalRole = document.getElementById("memberModalRole");
+
+function openMemberModal(member){
+  if(!memberModal) return;
+  memberModalName.textContent = member.dataset.name || member.querySelector("strong")?.textContent || "팀원 이름 입력";
+  memberModalInfo.textContent = member.dataset.info || member.querySelector("span")?.textContent || "팀원 소개 입력";
+  memberModalRole.textContent = member.dataset.role || "TEAM MEMBER";
+  memberModal.classList.remove("hidden");
+  document.body.classList.add("modal-open");
+}
+
+function closeMemberModal(){
+  if(!memberModal) return;
+  memberModal.classList.add("hidden");
+  document.body.classList.remove("modal-open");
+}
+
+document.addEventListener("click", (event) => {
+  const member = event.target.closest(".member-stack > div");
+  if(member){
+    openMemberModal(member);
+    return;
+  }
+  if(event.target === memberModal || event.target.closest("#memberModalClose")){
+    closeMemberModal();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if(event.key === "Escape") closeMemberModal();
+});
