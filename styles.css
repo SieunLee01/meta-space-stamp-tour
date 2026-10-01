@@ -388,3 +388,9 @@ body.modal-open{overflow:hidden}
   .hero-alien{height:520px;transform:none}
   .hero-character{width:min(500px,96%)}
 }
+
+
+/* HERO CHARACTER — 1.2x */
+.hero-character{width:min(636px,105.6%)!important;max-height:708px!important}
+@media(max-width:1050px){.hero-character{width:min(600px,110.4%)!important;max-height:708px!important}}
+@media(max-width:760px){.hero-character{width:min(600px,115.2%)!important;max-height:none!important}}
