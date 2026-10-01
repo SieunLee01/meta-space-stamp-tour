@@ -226,3 +226,18 @@ body.modal-open{overflow:hidden}
   background:rgba(86,245,255,.05)!important;
   transform:translateX(4px);
 }
+
+/* HERO ACTION BUTTONS */
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  align-items:center;
+}
+.hero-buttons .main-button,
+.hero-buttons .outline-button{
+  margin:0;
+}
+@media(max-width:480px){
+  .hero-buttons{flex-direction:column;align-items:flex-start}
+}
