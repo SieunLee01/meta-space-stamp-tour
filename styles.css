@@ -394,3 +394,8 @@ body.modal-open{overflow:hidden}
 .hero-character{width:min(636px,105.6%)!important;max-height:708px!important}
 @media(max-width:1050px){.hero-character{width:min(600px,110.4%)!important;max-height:708px!important}}
 @media(max-width:760px){.hero-character{width:min(600px,115.2%)!important;max-height:none!important}}
+
+
+/* HERO CHARACTER SIZE — FORCE 1.2X FINAL */
+.hero .hero-alien .hero-character{width:636px!important;max-width:none!important;max-height:708px!important;height:auto!important}
+@media(max-width:760px){.hero .hero-alien .hero-character{width:600px!important;max-width:115%!important;max-height:none!important}}
