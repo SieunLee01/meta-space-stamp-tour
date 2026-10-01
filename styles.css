@@ -90,3 +90,10 @@ footer{display:flex;justify-content:space-between;padding:25px 8vw;border-top:1p
   object-fit:cover!important;
   min-height:0!important;
 }
+
+/* FORCE DETAIL PANEL ABOVE GAME GRID */
+.games{display:flex!important;flex-direction:column!important}
+.games > .section-title{order:1!important}
+.games > .game-detail-panel{order:2!important}
+.games > .game-grid{order:3!important}
+.games > .game-detail-panel.active{display:grid!important}
