@@ -97,3 +97,14 @@ footer{display:flex;justify-content:space-between;padding:25px 8vw;border-top:1p
 .games > .game-detail-panel{order:2!important}
 .games > .game-grid{order:3!important}
 .games > .game-detail-panel.active{display:grid!important}
+
+/* TEAM MEMBERS - vertical stack */
+.game-detail-panel .member-grid{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:10px!important;
+}
+.game-detail-panel .member-grid>div{
+  width:100%!important;
+  box-sizing:border-box;
+}
