@@ -71,3 +71,17 @@ footer{display:flex;justify-content:space-between;padding:25px 8vw;border-top:1p
   .game-detail-panel h4{font-size:40px}
   .game-detail-panel .video-placeholder{height:240px;margin:25px 0}
 }
+
+
+/* Final game card/detail arrangement */
+.game-card{display:flex;flex-direction:column}
+.game-card .game-caption{order:1}
+.game-card .game-image-button{order:2}
+.game-card .game-detail{order:3}
+.game-caption h3{cursor:pointer}
+.game-detail-panel{position:relative}
+.game-detail-panel .member-grid{margin-bottom:12px}
+.game-detail-panel .stamp-button{display:block!important;visibility:visible!important;opacity:1!important;position:relative;z-index:2}
+.game-detail-panel .placeholder-text{min-height:0}
+.game-detail-panel .video-placeholder{grid-row:1 / span 4}
+@media(max-width:800px){.game-detail-panel .video-placeholder{grid-row:auto}}
