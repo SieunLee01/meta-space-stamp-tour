@@ -360,3 +360,31 @@ body.modal-open{overflow:hidden}
   .hero-meta-label{right:2%;top:10%}
   .hero-detected{right:2%;bottom:2%}
 }
+
+/* Final hero proportions matched to approved reference */
+.hero{
+  grid-template-columns:minmax(500px,44%) minmax(560px,56%);
+  padding:104px 8vw 58px;
+}
+.hero-copy{max-width:600px}
+.hero-copy h1{font-size:clamp(78px,8.2vw,138px)}
+.hero-alien{
+  height:610px;
+  transform:translate(0,18px);
+  justify-content:center;
+}
+.hero-character{
+  width:min(530px,88%);
+  max-height:590px;
+}
+.hero-meta-label{right:3%;top:18%;font-size:12px}
+.hero-detected{right:2%;bottom:10%;font-size:9px}
+@media(max-width:1050px){
+  .hero{grid-template-columns:1fr 1fr}
+  .hero-character{width:min(500px,92%)}
+}
+@media(max-width:760px){
+  .hero{grid-template-columns:1fr}
+  .hero-alien{height:520px;transform:none}
+  .hero-character{width:min(500px,96%)}
+}
