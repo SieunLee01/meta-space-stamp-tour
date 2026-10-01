@@ -201,3 +201,28 @@ body.modal-open{overflow:hidden}
   .member-modal-card{padding:38px 24px 30px}
   .member-modal-card h3{font-size:34px}
 }
+
+/* CLICKABLE TEAM MEMBER CARDS - FINAL */
+.member-stack .member-card{
+  display:block!important;
+  width:100%!important;
+  min-height:70px;
+  padding:15px!important;
+  margin:0;
+  border:1px solid rgba(255,255,255,.14)!important;
+  background:transparent!important;
+  color:var(--paper)!important;
+  text-align:left;
+  font:inherit;
+  cursor:pointer!important;
+  box-sizing:border-box;
+}
+.member-stack .member-card strong,
+.member-stack .member-card span{display:block!important}
+.member-stack .member-card strong{font-size:12px}
+.member-stack .member-card span{font-size:10px;color:#777;margin-top:6px;line-height:1.5}
+.member-stack .member-card:hover{
+  border-color:var(--cyan)!important;
+  background:rgba(86,245,255,.05)!important;
+  transform:translateX(4px);
+}
