@@ -77,15 +77,16 @@ footer{display:flex;justify-content:space-between;padding:25px 8vw;border-top:1p
 }
 
 
-/* TITLE IMAGE HEIGHT HALF - force exact half of previous height */
+
+/* GAME THUMBNAIL - half the original vertical size */
 .game-grid .game-image-button{
-  height:calc(var(--game-image-height, 360px) / 2)!important;
+  height:auto!important;
   aspect-ratio:auto!important;
-  overflow:hidden;
 }
 .game-grid .game-image{
   width:100%!important;
-  height:100%!important;
+  height:auto!important;
+  aspect-ratio:8 / 5!important;
   object-fit:cover!important;
-  display:block!important;
+  min-height:0!important;
 }
