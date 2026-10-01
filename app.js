@@ -67,18 +67,34 @@ function discover(id){
   }
 }
 
+const gameDetailPanel = document.getElementById("gameDetailPanel");
+let openGameCard = null;
+
+function closeGame(){
+  if(!openGameCard) return;
+  const detail = gameDetailPanel.querySelector(".game-detail");
+  if(detail) openGameCard.appendChild(detail);
+  gameDetailPanel.innerHTML = "";
+  gameDetailPanel.classList.remove("active");
+  const imageButton = openGameCard.querySelector(".game-image-button");
+  if(imageButton) imageButton.setAttribute("aria-expanded","false");
+  openGameCard = null;
+}
+
 function toggleGame(card){
-  const wasOpen = card.classList.contains("open");
-  document.querySelectorAll(".game-card.open").forEach(other => {
-    other.classList.remove("open");
-    const imageButton = other.querySelector(".game-image-button");
-    if(imageButton) imageButton.setAttribute("aria-expanded","false");
-  });
-  if(!wasOpen){
-    card.classList.add("open");
-    const imageButton = card.querySelector(".game-image-button");
-    if(imageButton) imageButton.setAttribute("aria-expanded","true");
+  if(openGameCard === card){
+    closeGame();
+    return;
   }
+  if(openGameCard) closeGame();
+  const detail = card.querySelector(".game-detail");
+  if(!detail) return;
+  gameDetailPanel.appendChild(detail);
+  gameDetailPanel.classList.add("active");
+  openGameCard = card;
+  const imageButton = card.querySelector(".game-image-button");
+  if(imageButton) imageButton.setAttribute("aria-expanded","true");
+  setTimeout(() => gameDetailPanel.scrollIntoView({behavior:"smooth",block:"start"}), 50);
 }
 
 document.querySelectorAll(".game-image-button").forEach(button => {
@@ -89,20 +105,3 @@ document.querySelectorAll(".game-caption h3").forEach(title => {
   title.addEventListener("click", () => toggleGame(title.closest(".game-card")));
 });
 
-document.getElementById("closeModal").onclick = () => modal.classList.add("hidden");
-document.getElementById("resetButton").onclick = () => {
-  if(confirm("모든 스탬프 기록을 초기화할까요?")){
-    collected = [];
-    save();
-    window.scrollTo({top:0, behavior:"smooth"});
-  }
-};
-
-// QR compatibility: booth=01, booth=02, booth=03
-const params = new URLSearchParams(location.search);
-const booth = params.get("booth");
-if(booth){
-  setTimeout(() => discover(booth.padStart(2,"0")), 500);
-}
-
-render();
