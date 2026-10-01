@@ -67,13 +67,18 @@ function discover(id){
   }
 }
 
-document.querySelectorAll(".game-trigger").forEach(trigger => {
-  trigger.addEventListener("click", () => {
-    const card = trigger.closest(".game-card");
+document.querySelectorAll(".game-image-button").forEach(button => {
+  button.addEventListener("click", () => {
+    const card = button.closest(".game-card");
+    const wasOpen = card.classList.contains("open");
     document.querySelectorAll(".game-card.open").forEach(other => {
-      if(other !== card) other.classList.remove("open");
+      other.classList.remove("open");
+      other.querySelector(".game-image-button").setAttribute("aria-expanded","false");
     });
-    card.classList.toggle("open");
+    if(!wasOpen){
+      card.classList.add("open");
+      button.setAttribute("aria-expanded","true");
+    }
   });
 });
 
