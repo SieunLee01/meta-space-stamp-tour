@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 456 437">
+<defs><pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#fff" opacity=".045"/></pattern></defs>
+<rect width="456" height="437" fill="#090a0f"/><rect width="456" height="437" fill="url(#scan)"/>
+<rect x="1" y="1" width="454" height="435" fill="none" stroke="#30313a"/>
+<text x="22" y="35" fill="#777" font-family="Arial,sans-serif" font-size="12" letter-spacing="2">GAME 03</text><text x="432" y="35" text-anchor="end" fill="#777" font-family="Arial,sans-serif" font-size="12" letter-spacing="2">TEMP</text>
+<circle cx="228" cy="185" r="100" fill="none" stroke="#777" stroke-width="3" stroke-dasharray="5 5"/><ellipse cx="228" cy="185" rx="64" ry="70" fill="#9a9aa0"/><ellipse cx="242" cy="195" rx="64" ry="70" fill="#4c4d53" opacity=".35"/><ellipse cx="207" cy="185" rx="12" ry="23" fill="#08090d"/><ellipse cx="249" cy="185" rx="12" ry="23" fill="#08090d"/>
+<text x="22" y="320" fill="#b8b8bd" font-family="Arial,sans-serif" font-size="28" font-weight="700">요월</text><text x="22" y="350" fill="#666" font-family="Arial,sans-serif" font-size="14">IMAGE PLACEHOLDER</text></svg>
