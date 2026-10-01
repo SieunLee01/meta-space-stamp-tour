@@ -76,6 +76,16 @@ footer{display:flex;justify-content:space-between;padding:25px 8vw;border-top:1p
  .game-detail-panel .video-placeholder{height:240px;margin:25px 0}
 }
 
-/* TITLE IMAGE HEIGHT HALF */
-.game-image-button{aspect-ratio:2 / 1!important}
-.game-image{height:100%!important;object-fit:cover!important}
+
+/* TITLE IMAGE HEIGHT HALF - force exact half of previous height */
+.game-grid .game-image-button{
+  height:calc(var(--game-image-height, 360px) / 2)!important;
+  aspect-ratio:auto!important;
+  overflow:hidden;
+}
+.game-grid .game-image{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  display:block!important;
+}
