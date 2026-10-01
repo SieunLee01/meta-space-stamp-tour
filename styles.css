@@ -54,39 +54,24 @@ footer{display:flex;justify-content:space-between;padding:25px 8vw;border-top:1p
 @media(max-width:480px){.member-grid{grid-template-columns:1fr}.game-title{font-size:32px}}
 
 
-/* Game detail opens BELOW the unchanged 3-card layout */
-.game-detail-panel{display:none;margin-top:34px;border-top:1px solid rgba(255,255,255,.18);padding:28px 0 55px}
+
+/* FINAL GAME LAYOUT */
+.games{display:flex;flex-direction:column}
+.game-grid{order:1}
+.game-detail-panel{order:2;display:none;margin:35px 0 50px;border-top:1px solid rgba(255,255,255,.18);padding:30px 0 55px}
 .game-detail-panel.active{display:grid;grid-template-columns:210px minmax(0,1fr);column-gap:28px;align-items:start}
-.game-detail-panel>.eyebrow{grid-column:1;grid-row:1;margin:8px 0 22px}
+.game-detail-panel .game-detail{display:contents}
+.game-detail-panel .eyebrow{grid-column:1;grid-row:1;margin:8px 0 18px}
 .game-detail-panel h4{grid-column:1;grid-row:2;font-family:Anton,Impact,sans-serif;font-size:52px;font-weight:400;line-height:1;margin:0 0 18px}
-.game-detail-panel .placeholder-text{grid-column:1;grid-row:3;color:#aaa8b2;line-height:1.8;margin:0 0 24px}
+.game-detail-panel .placeholder-text{grid-column:1;grid-row:3;color:#aaa8b2;line-height:1.8;margin:0 0 24px;min-height:0}
 .game-detail-panel .members{grid-column:1;grid-row:4;margin:0 0 24px}
-.game-detail-panel .stamp-button{grid-column:1;grid-row:5;justify-self:start}
+.game-detail-panel .stamp-button{grid-column:1;grid-row:5;justify-self:start;display:block!important;visibility:visible!important;opacity:1!important}
 .game-detail-panel .video-placeholder{grid-column:2;grid-row:1 / span 5;height:420px;margin:0;border:1px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;color:#666;letter-spacing:.18em;background:#08080d}
-.game-detail-panel .game-detail{display:contents;max-height:none;opacity:1;padding:0}
+.game-card.open{grid-column:auto!important}
 @media(max-width:800px){
-  .game-detail-panel{margin-top:30px;padding:22px 5px 45px}
-  .game-detail-panel.active{grid-template-columns:1fr;gap:0}
-  .game-detail-panel>.eyebrow,.game-detail-panel h4,.game-detail-panel .placeholder-text,.game-detail-panel .members,.game-detail-panel .stamp-button,.game-detail-panel .video-placeholder{grid-column:1;grid-row:auto}
-  .game-detail-panel h4{font-size:40px}
-  .game-detail-panel .video-placeholder{height:240px;margin:25px 0}
+ .game-detail-panel{margin:25px 0 40px;padding:25px 5px 45px}
+ .game-detail-panel.active{display:grid;grid-template-columns:1fr}
+ .game-detail-panel .eyebrow,.game-detail-panel h4,.game-detail-panel .placeholder-text,.game-detail-panel .members,.game-detail-panel .stamp-button,.game-detail-panel .video-placeholder{grid-column:1;grid-row:auto}
+ .game-detail-panel h4{font-size:40px}
+ .game-detail-panel .video-placeholder{height:240px;margin:25px 0}
 }
-
-
-/* Final game card/detail arrangement */
-.game-card{display:flex;flex-direction:column}
-.game-card .game-caption{order:1}
-.game-card .game-image-button{order:2}
-.game-card .game-detail{order:3}
-.game-caption h3{cursor:pointer}
-.game-detail-panel{position:relative}
-.game-detail-panel .member-grid{margin-bottom:12px}
-.game-detail-panel .stamp-button{display:block!important;visibility:visible!important;opacity:1!important;position:relative;z-index:2}
-.game-detail-panel .placeholder-text{min-height:0}
-.game-detail-panel .video-placeholder{grid-row:1 / span 4}
-@media(max-width:800px){.game-detail-panel .video-placeholder{grid-row:auto}}
-
-
-/* Detail panel sits above the game thumbnail/title grid when opened */
-.game-detail-panel{margin-top:35px;margin-bottom:45px}
-.game-detail-panel.active{order:-1}
