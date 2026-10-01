@@ -67,19 +67,26 @@ function discover(id){
   }
 }
 
-document.querySelectorAll(".game-image-button").forEach(button => {
-  button.addEventListener("click", () => {
-    const card = button.closest(".game-card");
-    const wasOpen = card.classList.contains("open");
-    document.querySelectorAll(".game-card.open").forEach(other => {
-      other.classList.remove("open");
-      other.querySelector(".game-image-button").setAttribute("aria-expanded","false");
-    });
-    if(!wasOpen){
-      card.classList.add("open");
-      button.setAttribute("aria-expanded","true");
-    }
+function toggleGame(card){
+  const wasOpen = card.classList.contains("open");
+  document.querySelectorAll(".game-card.open").forEach(other => {
+    other.classList.remove("open");
+    const imageButton = other.querySelector(".game-image-button");
+    if(imageButton) imageButton.setAttribute("aria-expanded","false");
   });
+  if(!wasOpen){
+    card.classList.add("open");
+    const imageButton = card.querySelector(".game-image-button");
+    if(imageButton) imageButton.setAttribute("aria-expanded","true");
+  }
+}
+
+document.querySelectorAll(".game-image-button").forEach(button => {
+  button.addEventListener("click", () => toggleGame(button.closest(".game-card")));
+});
+document.querySelectorAll(".game-caption h3").forEach(title => {
+  title.style.cursor = "pointer";
+  title.addEventListener("click", () => toggleGame(title.closest(".game-card")));
 });
 
 document.getElementById("closeModal").onclick = () => modal.classList.add("hidden");
