@@ -108,3 +108,8 @@ footer{display:flex;justify-content:space-between;padding:25px 8vw;border-top:1p
   width:100%!important;
   box-sizing:border-box;
 }
+
+
+/* TEAM MEMBER STACK - FINAL */
+.member-stack{display:flex!important;flex-direction:column!important;grid-template-columns:none!important;width:100%!important;gap:10px!important}
+.member-stack>div{display:block!important;width:100%!important;max-width:none!important;box-sizing:border-box!important}
