@@ -78,6 +78,7 @@ function closeGame(){
   gameDetailPanel.classList.remove("active");
   const imageButton = openGameCard.querySelector(".game-image-button");
   if(imageButton) imageButton.setAttribute("aria-expanded","false");
+  openGameCard.classList.remove("open");
   openGameCard = null;
 }
 
@@ -92,6 +93,7 @@ function toggleGame(card){
   gameDetailPanel.appendChild(detail);
   gameDetailPanel.classList.add("active");
   openGameCard = card;
+  card.classList.remove("open");
   const imageButton = card.querySelector(".game-image-button");
   if(imageButton) imageButton.setAttribute("aria-expanded","true");
   setTimeout(() => gameDetailPanel.scrollIntoView({behavior:"smooth",block:"start"}), 50);
