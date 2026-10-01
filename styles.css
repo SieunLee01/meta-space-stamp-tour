@@ -64,7 +64,6 @@ footer{display:flex;justify-content:space-between;padding:25px 8vw;border-top:1p
 .game-detail-panel .stamp-button{grid-column:1;grid-row:5;justify-self:start}
 .game-detail-panel .video-placeholder{grid-column:2;grid-row:1 / span 5;height:420px;margin:0;border:1px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;color:#666;letter-spacing:.18em;background:#08080d}
 .game-detail-panel .game-detail{display:contents;max-height:none;opacity:1;padding:0}
-.game-detail-panel .game-detail>*{min-width:0}
 @media(max-width:800px){
   .game-detail-panel{margin-top:30px;padding:22px 5px 45px}
   .game-detail-panel.active{grid-template-columns:1fr;gap:0}
