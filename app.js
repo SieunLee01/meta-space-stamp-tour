@@ -132,7 +132,7 @@ function closeMemberModal(){
 }
 
 document.addEventListener("click", (event) => {
-  const member = event.target.closest(".member-stack > div");
+  const member = event.target.closest(".member-card");
   if(member){
     openMemberModal(member);
     return;
