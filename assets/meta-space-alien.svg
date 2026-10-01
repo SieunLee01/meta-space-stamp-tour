@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 560">
+<defs>
+  <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+  <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".7" stop-color="#eef0f8"/><stop offset="1" stop-color="#d9dded"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#426cff"/><stop offset="1" stop-color="#1740d8"/></linearGradient>
+  <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff1b9c"/><stop offset="1" stop-color="#ff4fc2"/></linearGradient>
+</defs>
+<ellipse cx="250" cy="285" rx="190" ry="220" fill="#56f5ff" opacity=".10" filter="url(#soft)"/>
+<ellipse cx="250" cy="245" rx="205" ry="105" fill="none" stroke="#56f5ff" stroke-width="11" opacity=".9" transform="rotate(-18 250 245)" filter="url(#glow)"/>
+<ellipse cx="250" cy="245" rx="205" ry="105" fill="none" stroke="#9b6cff" stroke-width="4" opacity=".45" transform="rotate(-18 250 245)"/>
+<path d="M162 91 C139 50 160 25 181 45 C193 57 190 85 180 106" fill="none" stroke="#b8d9ff" stroke-width="12" stroke-linecap="round"/>
+<path d="M338 91 C361 50 340 25 319 45 C307 57 310 85 320 106" fill="none" stroke="#b8d9ff" stroke-width="12" stroke-linecap="round"/>
+<path d="M162 91 C139 50 160 25 181 45" fill="none" stroke="#56f5ff" stroke-width="4" opacity=".9"/>
+<path d="M338 91 C361 50 340 25 319 45" fill="none" stroke="#56f5ff" stroke-width="4" opacity=".9"/>
+<ellipse cx="250" cy="205" rx="157" ry="126" fill="#1740d8" opacity=".95" transform="translate(12 17)"/>
+<ellipse cx="250" cy="195" rx="157" ry="126" fill="url(#body)" stroke="#cdd2e2" stroke-width="4"/>
+<ellipse cx="250" cy="195" rx="112" ry="82" fill="#080b18"/>
+<ellipse cx="250" cy="192" rx="106" ry="77" fill="#10152a"/>
+<rect x="204" y="157" width="26" height="58" rx="13" fill="#56f5ff" filter="url(#glow)"/>
+<rect x="270" y="157" width="26" height="58" rx="13" fill="#56f5ff" filter="url(#glow)"/>
+<path d="M231 229 Q250 240 269 229" fill="none" stroke="#cfd3df" stroke-width="3" opacity=".7"/>
+<ellipse cx="250" cy="382" rx="83" ry="110" fill="#ff1b9c" opacity=".85" transform="translate(8 10)"/>
+<ellipse cx="250" cy="378" rx="83" ry="110" fill="url(#body)" stroke="#cdd2e2" stroke-width="4"/>
+<path d="M180 350 Q130 350 119 410 Q116 433 139 437 Q163 440 190 399" fill="url(#body)" stroke="#cdd2e2" stroke-width="4"/>
+<path d="M320 350 Q370 350 381 410 Q384 433 361 437 Q337 440 310 399" fill="url(#body)" stroke="#cdd2e2" stroke-width="4"/>
+<ellipse cx="215" cy="472" rx="30" ry="45" fill="url(#body)" stroke="#cdd2e2" stroke-width="4"/>
+<ellipse cx="285" cy="472" rx="30" ry="45" fill="url(#body)" stroke="#cdd2e2" stroke-width="4"/>
+<text x="250" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0d1230">MS</text>
+<path d="M246 390 l8 0" stroke="#56f5ff" stroke-width="3"/>
+<circle cx="250" cy="52" r="7" fill="#56f5ff" filter="url(#glow)"/>
+</svg>
